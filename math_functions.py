@@ -10,3 +10,10 @@ def add(a: Union[int, float], b: Union[int, float]):
 @app.get("/multiply")
 def multiply(a: Union[int, float], b: Union[int, float]):
     return {"result": a * b}
+
+
+@app.get("/divide")
+def divide(a: Union[int, float], b: Union[int, float]):
+    if b == 0:
+        return {"error": "Division by zero is not allowed"}
+    return {"result": a / b}
