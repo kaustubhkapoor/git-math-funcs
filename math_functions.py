@@ -11,6 +11,7 @@ def add(a: Union[int, float], b: Union[int, float]):
 def multiply(a: Union[int, float], b: Union[int, float]):
     return {"result": a * b}
 
+#//division
 
 @app.get("/divide")
 def divide(a: Union[int, float], b: Union[int, float]):
