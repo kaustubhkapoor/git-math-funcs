@@ -18,3 +18,11 @@ def divide(a: Union[int, float], b: Union[int, float]):
     if b == 0:
         return {"error": "Division by zero is not allowed"}
     return {"result": a / b}
+
+@app.get("square_root")
+def square_root(a: Union[int, float]):
+    return {"result": a**2}
+
+@app.get("/subtraction")
+def add(a: Union[int, float], b: Union[int, float]):
+    return {"result": a - b}
