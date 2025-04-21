@@ -26,3 +26,7 @@ def square_root(a: Union[int, float]):
 @app.get("/subtraction")
 def add(a: Union[int, float], b: Union[int, float]):
     return {"result": a - b}
+
+@app.get("/multiplication_table")
+def multiplication_table(a: Union[int, float]):
+    return [f"{a} x {i} = {a * i}" for i in range(1, 11)]
