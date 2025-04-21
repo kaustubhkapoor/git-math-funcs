@@ -24,5 +24,5 @@ def square_root(a: Union[int, float]):
     return {"result": a**2}
 
 @app.get("/subtraction")
-def add(a: Union[int, float], b: Union[int, float]):
+def subtraction(a: Union[int, float], b: Union[int, float]):
     return {"result": a - b}
