@@ -19,10 +19,14 @@ def divide(a: Union[int, float], b: Union[int, float]):
         return {"error": "Division by zero is not allowed"}
     return {"result": a / b}
 
-@app.get("square_root")
+@app.get("/square_root")
 def square_root(a: Union[int, float]):
     return {"result": a**2}
 
 @app.get("/subtraction")
 def subtraction(a: Union[int, float], b: Union[int, float]):
     return {"result": a - b}
+  
+@app.get("/multiplication table")
+def multiplication_table(a:Union[int, float]):
+    return [f"{a}* {i}={a*i}" for i in range(1, 11)]
